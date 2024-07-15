@@ -1,0 +1,44 @@
+﻿@{
+     Layout = null;
+  
+}
+<style>
+    .colorDiv{
+        color:red;
+    }
+</style>
+
+@model AcademiaAppication.Models.Account.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+<link rel="stylesheet" href="~/css/ViewLogin.css" asp-append-version="true" />
+   
+    <div class="login-container">
+        <form asp-action="Login"asp-controller="Account" method="post" class="login-form">
+            <h2 id="h2Login">Login</h2>
+            <div class="input-group">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" placeholder="Digite seu email"/>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" placeholder="Digite a senha" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        <div><a asp-action="ForgotPassword" asp-controller="Account"> Esqueci minha senha</a></div>
+        <hr />
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        <div asp-validation-summary="All" class="colorDiv"></div>
+        </form>
+    </div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+

@@ -1,0 +1,21 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/Academia.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%; /* Ajuste a largura conforme necessário */
+    background-position: center;
+    font-family: "Baskervville SC", serif;
+}
+#LogoHome {
+    color: #1a2f44;
+    font-weight: 600;
+    font-size: 4rem;
+    font-family: "Baskervville SC", serif;
+    text-shadow: 4px 4px 4px grey;
+}

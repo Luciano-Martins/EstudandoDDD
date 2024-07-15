@@ -1,0 +1,68 @@
+﻿@model AcademiaAppication.Models.Account.UserViewModel
+@{
+    ViewData["Title"] = "Cadastro";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+    // Layout = "_Layout";
+}
+<style>
+.divCadastro{
+        background: #E1EDF8;
+        border-radius: 5px;      
+}
+.H1titulo{
+        text-align: center;
+        color: #1a2f44;
+}
+#imgLeft ,#imgright {
+    background-image: url(../img/Academia.jpg);
+    background-repeat: no-repeat;
+    background-size: 50%; /* Ajuste a largura conforme necessário */
+    background-position: center;     
+}
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="imgLeft" class="col-sm-3"></div>
+        <div class="col-sm-6 divCadastro ">
+            <h1 class="H1titulo">Cadastro Usuário</h1>
+            <form asp-action="Cadastro"asp-controller="Account" method="post">
+                <div class="mb-3 inpur-group">
+                    <label asp-for="FirstName" class="form-label">FirstName</label>
+                    <input asp-for="FirstName" type="text" class="form-control"placeholder="Seu Nome">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3 inpur-group">
+                    <label asp-for="LastName" class="form-label">LastName</label>
+                    <input asp-for="LastName" type="text" class="form-control"placeholder="SobreNome">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3 inpur-group">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" type="email" class="form-control"placeholder="Digite seu e-mail">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3 inpur-group">
+                    <label asp-for="UserName" class="form-label">UserName</label>
+                    <input asp-for="UserName" type="text" class="form-control"placeholder="Digite seu Usuário">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="PasswordConfirmed">PasswordConfirmed</label>
+                    <input asp-for="PasswordConfirmed" type="password" class="form-control">
+                    <span asp-validation-for="PasswordConfirmed" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a asp-action="Index" asp-controller="Home"class="btn btn-outline-secondary"> voltar</a>
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </form>
+        </div>
+        <div id="imgright" class="col-sm-3"></div>     
+    </div>
+</div>
+

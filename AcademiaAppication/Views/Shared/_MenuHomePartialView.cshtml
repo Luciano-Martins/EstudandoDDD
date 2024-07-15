@@ -1,0 +1,29 @@
+﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navBarCor border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand  text-light " asp-area="" asp-controller="Home" asp-action="Index">Os Fortes</a>
+        <span><img src="~/img/Logo.png" width="50px" height="50px" /></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="btn btn-outline-light" title="Criar Conta" asp-area="" asp-controller="Account" asp-action="Cadastro"><i class="bi bi-person-plus-fill"></i>Criar Conta</a>
+                </li>
+                <li class="nav-item ms-2">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" title="Acessar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-lock"></i> Entrar
+                        </button>
+                        <ul class="dropdown-menu dropdown">
+                             <li><a class="dropdown-item " title="Login" asp-action="Login" asp-controller="Account"><i class="bi bi-door-open-fill"></i>Login</a></li>
+                           @*  <li><hr class="dropdown-divider"></li> *@
+                          @*   <li><a class="dropdown-item " title="Logout" href="#"><i class="bi bi-door-closed-fill"></i>Logout</a></li> *@
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
